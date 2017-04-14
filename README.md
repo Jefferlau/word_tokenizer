@@ -55,8 +55,8 @@ word2vec/distance vectors.bin
 
 ## 聚类及排序
 ```bash
-word2vec/word2vec -train resultbig.txt -output classes.txt -cbow 0 -size 200 -window 5 -negative 0 -hs 1 -sample 1e-3 -threads 12 -classes 500
-sort classes.txt -k 2 -n > classes.sorted.txt
+nohup word2vec/word2vec -train resultbig.txt -output classes.txt -cbow 0 -size 200 -window 5 -negative 0 -hs 1 -sample 1e-3 -threads 12 -classes 500 &
+nohup sort classes.txt -k 2 -n > classes.sorted.txt &
 ```
 
 # 参考资料
