@@ -22,7 +22,7 @@ make
 ```
 mvn package -DskipTests
 ```
-得到 target/ansj-word-package.jar 可执行文件，后续说明如何使用。
+得到 target/word-tokenizer-package.jar 可执行文件，后续说明如何使用。
 
 # 分词聚类
 
@@ -39,7 +39,7 @@ cat news_tensite_xml.dat | iconv -f gbk -t utf-8 -c | grep "<content>" > corpus.
 ## 分词
 利用本项目对上一步处理过的文件进行分词，词语间以空格分割。
 ```bash
-nohup ./ansj-word-package.jar corpus.txt resultbig.txt > logs/out.log &
+nohup ./word-tokenizer-package.jar corpus.txt resultbig.txt > logs/out.log &
 ```
 ## 分析
 对上一步生成的结果文件 resultbig.txt 进行分析，生成 vectors.bin文件，便于以后重复利用。
