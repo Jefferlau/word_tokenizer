@@ -1,0 +1,8 @@
+
+logging:
+  level:
+    root: INFO
+    com:
+      jusfoun: debug
+  file: logs/ansj.log
+
